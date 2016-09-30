@@ -1,8 +1,8 @@
 import React from 'react';
-
 import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
+import sampleFishes from '../sample-fishes';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +22,12 @@ class App extends React.Component {
     fishes[`fish-${timestamp}`] = fish;
     // set state
     this.setState({ fishes });
+  }
+
+  loadSamples() {
+    this.setState({
+      fishes: sampleFishes,
+    });
   }
 
   render() {
