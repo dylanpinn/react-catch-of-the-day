@@ -13,3 +13,17 @@ build
 .DS_Store
 .env
 npm-debug.log
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Created by https://www.gitignore.io/api/typings
+
+### Typings ###
+## Ignore downloaded typings
+typings
