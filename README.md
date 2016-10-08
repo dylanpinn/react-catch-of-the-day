@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/dylanpinn/react-catch-of-the-day/badges/gpa.svg)](https://codeclimate.com/github/dylanpinn/react-catch-of-the-day)
+[![dependencies Status](https://david-dm.org/dylanpinn/react-catch-of-the-day/status.svg)](https://david-dm.org/dylanpinn/react-catch-of-the-day)
+[![devDependencies Status](https://david-dm.org/dylanpinn/react-catch-of-the-day/dev-status.svg)](https://david-dm.org/dylanpinn/react-catch-of-the-day?type=dev)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.  
