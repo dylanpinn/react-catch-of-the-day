@@ -2,6 +2,14 @@ import React from 'react';
 
 import AddFishForm from './AddFishForm';
 
+const propTypes = {
+  fishes: React.PropTypes.object.isRequired,
+  updateFish: React.PropTypes.func.isRequired,
+  removeFish: React.PropTypes.func.isRequired,
+  addFish: React.PropTypes.func.isRequired,
+  loadSamples: React.PropTypes.func.isRequired,
+};
+
 class Inventory extends React.Component {
   constructor(props) {
     super(props);
@@ -36,12 +44,24 @@ class Inventory extends React.Component {
           placeholder="Fish Price"
           onChange={e => this.handleChange(e, key)}
         />
-        <select name="status" value={fish.status} onChange={e => this.handleChange(e, key)}>
+        <select
+          name="status" value={fish.status}
+          onChange={e => this.handleChange(e, key)}
+        >
           <option value="available">Fresh!</option>
           <option value="unavailable">Sold Out!</option>
         </select>
-        <textarea type="text" name="desc" value={fish.desc} placeholder="Fish Desc" onChange={e => this.handleChange(e, key)} />
-        <input type="text" name="image" value={fish.image} placeholder="Fish Image" onChange={e => this.handleChange(e, key)} />
+        <textarea
+          type="text"
+          name="desc" value={fish.desc}
+          placeholder="Fish Desc"
+          onChange={e => this.handleChange(e, key)}
+        />
+        <input
+          type="text"
+          name="image"
+          value={fish.image} placeholder="Fish Image" onChange={e => this.handleChange(e, key)}
+        />
         <button onClick={() => this.props.removeFish(key)}>Remove Fish</button>
       </div>
     );
@@ -58,5 +78,7 @@ class Inventory extends React.Component {
     );
   }
 }
+
+Inventory.propTypes = propTypes;
 
 export default Inventory;
