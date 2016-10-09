@@ -2,19 +2,14 @@ import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import { formatPrice } from '../helpers';
 
-const propTypes = {
-  fishes: React.PropTypes.object.isRequired,
-  order: React.PropTypes.object.isRequired,
-  removeFromOrder: React.PropTypes.func.isRequired,
-};
-
 class Order extends React.Component {
-  constructor(props) {
-    super(props);
-    this.renderOrder = this.renderOrder.bind(this);
-  }
+  static propTypes = {
+    fishes: React.PropTypes.object.isRequired,
+    order: React.PropTypes.object.isRequired,
+    removeFromOrder: React.PropTypes.func.isRequired,
+  };
 
-  renderOrder(key) {
+  renderOrder = (key) => {
     const fish = this.props.fishes[key];
     const count = this.props.order[key];
     const removeButton = <button onClick={() => this.props.removeFromOrder(key)}>&times;</button>;
@@ -40,7 +35,7 @@ class Order extends React.Component {
         <span className="price">{formatPrice(count * fish.price)}</span>
       </li>
     );
-  }
+  };
 
   render() {
     const orderIds = Object.keys(this.props.order);
@@ -73,7 +68,5 @@ class Order extends React.Component {
     );
   }
 }
-
-Order.propTypes = propTypes;
 
 export default Order;

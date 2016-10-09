@@ -1,10 +1,10 @@
 import React from 'react';
 
-const propTypes = {
-  addFish: React.PropTypes.func.isRequired,
-};
-
 class AddFishForm extends React.Component {
+  static propTypes = {
+    addFish: React.PropTypes.func.isRequired,
+  };
+
   createFish(event) {
     event.preventDefault();
     const fish = {
@@ -37,7 +37,5 @@ class AddFishForm extends React.Component {
     );
   }
 }
-
-AddFishForm.propTypes = propTypes;
 
 export default AddFishForm;
