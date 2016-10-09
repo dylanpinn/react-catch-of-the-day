@@ -2,7 +2,7 @@ import React from 'react';
 import { formatPrice } from '../helpers';
 
 class Fish extends React.Component {
-  propTypes = {
+  static propTypes = {
     details: React.PropTypes.object.isRequired,
     index: React.PropTypes.string.isRequired,
     addToOrder: React.PropTypes.func.isRequired,
