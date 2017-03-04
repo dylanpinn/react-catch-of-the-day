@@ -6,21 +6,21 @@
     "autoprefixer-stylus": "0.13.0",
     "babel-eslint": "^7.0.0",
     "concurrently": "3.1.0",
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb": "^14.0.0",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
     "react-scripts": "0.9.3",
     "stylus": "0.54.5"
   },
   "dependencies": {
     "history": "4.5.1",
-    "re-base": "2.5.2",
+    "re-base": "2.6.0",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "4.0.0-alpha.3"
+    "react-router": "4.0.0-beta.6"
   },
   "scripts": {
     "start": "react-scripts start",
