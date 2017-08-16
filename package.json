@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "history": "4.6.3",
-    "re-base": "3.0.2",
+    "re-base": "3.0.3",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "15.6.0",
     "react-dom": "^15.3.2",
