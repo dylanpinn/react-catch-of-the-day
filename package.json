@@ -5,7 +5,6 @@
   "devDependencies": {
     "autoprefixer-stylus": "0.14.0",
     "babel-eslint": "^7.0.0",
-    "concurrently": "3.5.0",
     "eslint": "^4.4.1",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.2.0",
@@ -24,12 +23,13 @@
     "react-router": "4.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "watch": "concurrently --names 'webpack, stylus' --prefix name 'npm run start' 'npm run styles:watch'",
-    "build": "react-scripts build",
+    "build-css": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "watch-css": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
-    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
+    "eject": "react-scripts eject"
   }
 }
